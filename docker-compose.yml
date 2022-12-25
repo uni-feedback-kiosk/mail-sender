@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ./
+    environment:
+      - MAILER_SMTP_HOST
+      - MAILER_SMTP_PORT
+      - MAILER_SMTP_USERNAME
+      - MAILER_SMTP_PASSWORD
+      - MAILER_SENDER_NAME
+      - MAILER_MAIL_RECIPIENT
+      - MAILER_BEARER_TOKEN
+    ports:
+      - "127.0.0.1:8001:8001"
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: 1G
