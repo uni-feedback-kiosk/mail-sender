@@ -2,6 +2,7 @@ version: '3.9'
 
 services:
   api:
+    image: ghcr.io/uni-feedback-kiosk/mail-sender:latest
     build:
       dockerfile: ./docker/Dockerfile
       context: ./
