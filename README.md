@@ -2,6 +2,11 @@
 
 Backend for sending mail. Connects to an SMTP server and sends the mail on request.
 
+> **Note**
+> The repository is archived since the service is not needed anymore.
+>
+> [uni-feedback-kiosk/app](https://github.com/uni-feedback-kiosk/app) runs on Electron and can send mail from its Node.js process.
+
 ## How to
 
 ### Prerequisites
